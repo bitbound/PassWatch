@@ -1,0 +1,23 @@
+﻿
+************************************
+PassWatch Syntax:
+
+PassWatch [ -install {-force} | -reinstall | -uninstall | -update FilePath ]
+
+Elevated privileges are required for all operations.
+
+-install
+Installs PassWatch.  If PassWatch_Config.json is present, its settings will be used.
+
+-force
+Forces overwrite when installing.  Same as reinstall.
+
+-reinstall
+Reinstalls PassWatch. Same as -install -force.
+
+-uninstall
+Removes PassWatch.
+
+-update FilePath
+Used by the auto-updater.  The file at FilePath will be replaced with this one.
+************************************
