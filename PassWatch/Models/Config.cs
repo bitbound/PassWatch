@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.Text;
@@ -12,7 +13,7 @@ namespace PassWatch.Models
         public string InstallFolder { get; set; } = Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData) + @"\PassWatch\";
 
         // Sets the log file path.
-        public string LogPath { get; set; } = @"C:\Users\Public\Documents\Logs\PassWatch_Log.txt";
+        public string LogPath { get; set; } = Path.GetPathRoot(Environment.SystemDirectory) + @"Users\Public\Documents\Logs\PassWatch_Log.txt";
 
         // URI that will respond to an HTTP GET request with a version number that can be parsed by System.Version.Parse().
         public string AutoUpdateServiceURI { get; set; }
